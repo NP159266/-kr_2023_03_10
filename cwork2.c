@@ -4,13 +4,14 @@
 int main(){
 	string line;
 	ifstream inputs("/c/Users/Nik/povalyaev/inputs.txt", ios::in);
-	reults.open("/c/Users/Nik/povalyaev/results.txt", ios::app);
-	if (inputs.isopen()){
+	ofstream results;
+	results.open("/c/Users/Nik/povalyaev/results.txt", ios::app);
+	if (inputs.is_open()){
 		while (getline(inputs, line)){
 			c=placheck(line);
+			results<<line<<c<<std::endl;
 
 		}
 	}
 	inputs.close() 
 	results.close();
-
