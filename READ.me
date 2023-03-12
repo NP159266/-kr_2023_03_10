@@ -1,0 +1,22 @@
+1. нет Makefile
+2. необходимо считать данные из файла который передаётся во время запуска программы,
+	к примеру так: ./a.out testPallindrom
+3. сообщение об ошибке компилятора
+
+g++ cwork2.c res.c
+cwork2.c:3:10: fatal error: fsrteam: No such file or directory
+    3 | #include <fsrteam>
+      |          ^~~~~~~~~
+compilation terminated.
+res.c:2:5: error: ambiguating new declaration of ‘int reverse(int)’
+    2 | int reverse(int s){
+      |     ^~~~~~~
+In file included from res.c:1:
+res.h:5:6: note: old declaration ‘void reverse(int)’
+    5 | void reverse(int);
+      |      ^~~~~~~
+res.c:14:1: error: ‘string’ does not name a type; did you mean ‘stdin’?
+   14 | string palcheck(int a){
+      | ^~~~~~
+      | stdin
+
